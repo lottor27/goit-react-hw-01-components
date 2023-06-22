@@ -10,7 +10,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      React homework template 
     </div>
   );
 };
+
+
+// Компоненты всех заданий рендерятся на одной странице, внутри общего контейнера - корневого компонента <App>.
