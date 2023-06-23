@@ -1,4 +1,4 @@
-// import user from '../../components/';
+import user from '../user.json';
 
 export const Card = user => {
   return (
