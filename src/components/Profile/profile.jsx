@@ -1,28 +1,30 @@
 import user from '../user.json';
 
-export const Card = user => {
-  return (
-    <div class="profile">
-      <div class="description">
-        <img src="{user.avatar}" alt="{user.username}" class="avatar" />
-        <h2 class="name">{user.username}</h2>
-        <p class="tag">{user.tag}</p>
-        <p class="location">{user.location}</p>
+
+
+export const Card = ({ avatar, username, tag, location, stats}) => {
+    return (
+      <div className="profile">
+        <div className="description">
+          <img src={avatar} alt={username} className="avatar" />
+          <h2 className="name">{username}</h2>
+          <p className="tag">{tag}</p>
+          <p className="location">{location}</p>
+        </div>
+        <ul className="stats">
+          <li>
+            <span className="label">Followers</span>
+            <span className="quantity">4</span>
+          </li>
+          <li>
+            <span className="label">Views</span>
+            <span className="quantity">5</span>
+          </li>
+          <li>
+            <span className="label">Likes</span>
+            <span className="quantity">6</span>
+          </li>
+        </ul>
       </div>
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{user.stats.followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{user.stats.views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{user.stats.likes}</span>
-        </li>
-      </ul>
-    </div>
-  );
+    );
 };
