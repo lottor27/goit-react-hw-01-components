@@ -1,0 +1,32 @@
+.box {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.transactionHistory {
+  table-layout: fixed;
+  width: 600px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
+.headListItem {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  background: #4db7e9;
+   border-radius: 5px;
+}
+.listItemBody:nth-child(odd) {
+  background: #c7c4c4;
+}
+.listItemBody:nth-child(even) {
+  background: #f3ebeb;
+}
+
+.listItem {
+  padding: 5px 10px;
+  text-align: center;
+}
