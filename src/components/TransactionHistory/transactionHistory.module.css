@@ -13,8 +13,12 @@ align-items: center;
     rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
 }
 .headListItem {
+   font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
   color: #fff;
-  font-weight: bold;
+ 
   padding: 5px;
   background: #4db7e9;
    border-radius: 5px;
@@ -27,6 +31,9 @@ align-items: center;
 }
 
 .listItem {
+    font-family: 'Cantarell', sans-serif;
+     font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
   text-align: center;
 }
