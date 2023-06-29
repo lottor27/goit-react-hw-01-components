@@ -5,7 +5,7 @@ import data from '../components/data.json';
 import friends from '../components/friends.json';
 import FriendList from './FriendList/friendList';
 
-export { App };
+
 
 const App = () => {
   return (
@@ -23,5 +23,5 @@ const App = () => {
   );
 };
 
-
+export { App };
 // Компоненты всех заданий рендерятся на одной странице, внутри общего контейнера - корневого компонента <App>.
