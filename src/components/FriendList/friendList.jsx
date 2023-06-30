@@ -4,28 +4,7 @@ import PropTypes from 'prop-types';
 export default function FriendList({ friends }) {
   return (
     <ul className={css.friendList}>
-      <div className={css.box}>
-        {friends.map(friend => (
-          <li className={css.item} key={friend.id}>
-            <span
-              className={
-                friend.isOnline
-                  ? `${css.itemstatus} ${css.onLineStatus}`
-                  : `${css.itemstatus} ${css.offLineStatus}`
-              }
-            >
-              {friend.isOnline}
-            </span>
-            <img
-              className={css.avatar}
-              src={friend.avatar}
-              alt="User avatar"
-              width="48"
-            />
-            <p className={css.name}>{friend.name}</p>
-          </li>
-        ))}
-      </div>
+      <div className={css.box}>{friends.map(FriendListItem)}</div>
     </ul>
   );
 }
@@ -33,3 +12,30 @@ export default function FriendList({ friends }) {
 FriendList.propTypes = {
   friends: PropTypes.array.isRequired,
 };
+
+function FriendListItem({ avatar, name, isOnline, id }) {
+  return (
+    <li className={css.item} key={id}>
+      <span
+        className={
+          isOnline
+            ? `${css.itemstatus} ${css.onLineStatus}`
+            : `${css.itemstatus} ${css.offLineStatus}`
+        }
+      >
+        {isOnline}
+      </span>
+      <img
+        className={css.avatar}
+        src={avatar}
+        alt="User avatar"
+        width="48"
+      />
+      <p className={name}>{name}</p>
+    </li>
+  );
+}
+
+// {
+//
+// }
