@@ -1,4 +1,5 @@
 import css from './transactionHistory.module.css';
+import PropTypes from 'prop-types';
 
 export default function TransactionHistory({ items}) {
     return (
@@ -26,3 +27,7 @@ export default function TransactionHistory({ items}) {
     );
     
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array.isRequired,
+};
